@@ -1,0 +1,101 @@
+\documentclass[oneside]{ZJUthesis}
+
+% 该文档中首字符为“%”的均为注释行，不会在论文中出现
+
+% 由于fontsepc包有更新，可能造成在编译过程中的问题
+% 如果使用ZJUthesis有问题，可尝试使用ZJUthesisv2
+% 如果仍有问题，可换回ZJUthesis，尝试将下面的一行拷至本文档\documentclass之前
+% \expandafter\def\csname CTEX@spaceChar\endcsname{\hspace{1em}}
+
+% 论文默认为双面模式，需单面模式请将第一行换为如下所示：
+% \documentclass[oneside]{ZJUthesis}
+
+% 取消目录中链接的颜色，方便打印
+% 如需颜色，请将“false”改为“true”
+\hypersetup{colorlinks=false}
+
+%\usepackage[sectionbib]{chapterbib}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文字体设定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fangsong
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文封面内容
+
+\title{标题一行}
+% 如果标题一行写不下，就写成两行，在下面的命令里写第二行，不需要两行则注释掉
+\titletl{标题二行}
+%\titletl{test}
+
+%英文题目
+\Etitle{title line 1}
+% 如果一行写不下，同中文题目设定，一行写不下则写两行，不需要就注释掉
+\Etitletl{title line 2}
+
+% 作者
+\author{作~者}
+
+\degree{某士}
+
+% 导师
+\supervisor{导师姓名}
+
+% 合作导师，如果有的话，去掉注释，
+%\cpsupervisor{某 \quad某某}
+
+% 专业名称
+\major{控制科学与工程}
+
+% 研究方向
+\researchdm{21632xxx}
+
+% 所属学院
+\institute{控制科学与工程学院}
+
+%论文提交日期
+\submitdate{2017年12月}
+
+% 生成封面
+\makeCoverPage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文部分开始
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUfrontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 目录页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文内容部分开始
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUmainmatter
+
+\include{./Chapters/chap1}
+
+\include{./Chapters/chap2}
+
+\include{./Chapters/chap3}
+
+\include{./Chapters/chap4}
+
+\include{./Chapters/chap5}
+
+\include{./Chapters/chap6}
+
+
+\ZJUbackmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUthesisbib{thesisbib}
+
+\end{document}
