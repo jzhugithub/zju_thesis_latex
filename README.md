@@ -36,6 +36,6 @@ Windows下安装CTeX_2.9.2.164_Full
 
 <img src="pic/READMEpic3.png" width="15%">
 
-4. 点击PDFP review进行查看，点击弹窗中的内容可进行跳转。如下图
+4. 点击PDF Preview进行查看，点击弹窗中的内容可进行跳转。如下图
 
 <img src="pic/READMEpic4.png" width="20%">
