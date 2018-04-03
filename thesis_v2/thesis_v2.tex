@@ -1,0 +1,209 @@
+\documentclass[oneside]{ZJUthesis}
+
+
+\usepackage[lined,boxed,commentsnumbered, ruled]{algorithm2e}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{arcs}
+%\usepackage{algorithm}
+\usepackage{algorithmic}
+\newtheorem{MyTheo}{Theorem}
+\usepackage{multirow}
+
+\usepackage{booktabs}
+
+
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+\begin{document}
+%\bibliographystyle{unsrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文字体设定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\kaishu
+%\fangsong
+%\songti\zihao{-4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文封面内容
+% 中图分类号
+\classification{TP242.6}
+% 单位代码
+\serialnumber{10335}
+% 密级，如需密级则将其前“%” 去掉
+\SecretLevel{公开}
+% 学号
+\PersonalID{21632...}
+
+\title{标题一行}
+% 如果标题一行写不下，就写成两行，在下面的命令里写第二行，不需要两行则注释掉
+\titletl{第二行}
+
+%英文题目 Visual Inertial
+\Etitle{英文题目一行}
+% 如果一行写不下，同中文题目设定，一行写不下则写两行，不需要就注释掉
+\Etitletl{英文题目二行}
+%\Etitlet1{}
+% 作者
+\author{作者}
+%\author{}
+\degree{x士}
+% 导师
+\supervisor{导师姓名}
+%\supervisor{}
+% 专业名称
+\major{专业名称}
+% 研究方向
+\researchdm{研究方向}
+% 所属学院
+\institute{所属学院}
+%论文提交日期
+\submitdate{二〇一x年一月十号}
+% 答辨日期
+\defenddate{二〇一x年三月十号}
+% 生成封面  暂时注释
+\makeCoverPage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 中文题名页内容
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 论文评阅人信息 注意两字名与三字名，两字职称与三字职称的写法，便于对齐
+% 多余的名额直接注释掉即可，比如三个评阅人，把评阅人D，E注释掉即可
+\reviewersA{xx\hspace{1em} 教授\hspace{1em}浙江大学}
+\reviewersB{匿名}
+\reviewersC{匿名}
+\reviewersD{匿名}
+%\reviewersE{}
+
+% 答辩委员会信息，如果某一个单位比较长，
+% 请在其它较短后面补上{hspace{Xem}}，X是比最长的单位名少几个字
+% 如果实际人数少于6人，多余的注释掉即可
+\chairman{？\hspace{1em} 研究员\hspace{1em}浙江大学}
+\commissionerA{？\hspace{1em} 副教授\hspace{1em}浙江大学}
+\commissionerB{？\hspace{1em}见\hspace{1em} 副教授\hspace{1em}浙江大学}
+%\commissionerC{于欣\hspace{1.5em} 教授\hspace{1em}浙江大学宁波理工学院}
+%\commissionerD{章春国\hspace{1em} 教授\hspace{1em}杭州电子科技大学}
+%\commissionerE{吴俊\hspace{1.5em} 教授\hspace{1.5em} 浙江大学}
+
+% 生成中文题名页  暂时注释
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 英文封面内容，硕士论文可不要此页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 英文题名
+
+%\englishtitle{Pose Estimation of Multi-Sensor}
+% %如果题名一行写不下，就写到第二行，不需要则将其注释掉
+%\englishtitletl{Fusion for Quadrotor Systems}
+%
+% %评阅人信息，名字，职称，单位尽量用简写，否则会写不下
+%\EreviewersA{Yu Xin\hspace{1em}Professor\hspace{1em}Ningbo Institute of Technology}
+%\EreviewersB{Anonymous}
+%\EreviewersC{Anonymous}
+%\EreviewersD{Anonymous}
+%\EreviewersE{}
+%
+% %答辩委员会信息，同样尽量用简写，否则会写不下
+%\Echairman{Huang Wenjun\hspace{1em}Professor\hspace{1em}Zhejiang University}
+%\EcommissionerA{Wu Weimin\hspace{1em}Associate Professor\hspace{1em}Zhejiang University}
+%\EcommissionerB{Deng Jian\hspace{1em}Associate Professor\hspace{1em}Zhejiang University}
+%\EcommissionerC{}
+%\EcommissionerD{}
+%\EcommissionerE{}
+%
+%
+% %生成英文封面  暂时注释
+%\makeenglishtitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 原创声明与版权协议页
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 生成原创声明与版权协议页  暂时注释
+\makeOSandCPRTpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 论文部分开始 暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUfrontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 摘要中文  暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Chapters/abstractC}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 英文摘要  暂时注释 未修改 暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Chapters/abstractE}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 插图列表   暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUListofFigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 表格列表  暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUListofTables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 缩写、符号清单、术语表
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{./Chapters/symbol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 目录页   暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文内容部分开始  暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ZJUmainmatter
+
+%引言  暂时注释
+\input{./Chapters/chap1}
+
+
+%基于IARC
+\input{./Chapters/chap2}
+
+%\ZJUbackmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献   暂时注释
+%%%%%%%%%%%%%%%%%%%%;%%%%%%%%%%
+\ZJUthesisbib{thesisbib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 致谢页  暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Chapters/thanks}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 索引
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ZJUindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 个人简历 暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Chapters/resume}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 发表论文目录 暂时注释
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Chapters/publications}
+
+\end{document}
